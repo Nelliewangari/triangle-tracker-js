@@ -1,17 +1,14 @@
 var triangle = function(sideOne, sideTwo, sideThree){
 
-  var sides = [sideOne, sideTwo, sideThree]
-  if(sideOne === '' || sideTwo === '' || sideThree === '') {
-    alert("Please enter three side lengths");
-  } else if (isNaN(sides[0]) || isNaN(sides[1]) || isNaN(sides[2])) {
+  if (isNaN(sideOne) || isNaN(sideTwo) || isNaN(sideThree)) {
     alert("all sides must be numerical");
-  } else if (sides[0] >= (sides[1] + sides[2]) || sides[1] >= (sides[2] + sides[0]) || sides[2] >= (sides[0] + sides[1])) {
+  } else if (sideOne >= (sideTwo + sideThree) || sideTwo >= (sideThree + sideOne) || sideThree >= (sideOne + sideTwo)) {
     alert("This is not a valid triangle");
-  } else if (sides[0]===sides[1] && sides[1]===sides[2]) {
+  } else if (sideOne===sideTwo && sideTwo===sideThree) {
     return "equilateral";
-  } else if (sides[0]===sides[1] || sides[0]===sides[2] || sides[2]===sides[1]) {
+  } else if (sideOne===sideTwo || sideOne===sideThree || sideThree===sideTwo) {
     return "isosceles";
-  } else if (sides[0]!=sides[1] && sides[0]!=sides[2]) {
+  } else if (sideOne!=sideTwo && sideOne!=sideThree) {
     return "scalene";
   } else {
     return sides;
@@ -40,6 +37,9 @@ $(document).ready(function() {
       alert("Don't be a square, Give me a triangle!")
     }
 
+    sideOne = parseInt($("input#sideOne").val(""));
+    sideTwo = parseInt($("input#sideTwo").val(""));
+    sideThree = parseInt($("input#sideThree").val(""));
 
     $("#result").show();
     event.preventDefault();
