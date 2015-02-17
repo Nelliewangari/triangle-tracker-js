@@ -1,9 +1,10 @@
 var triangle = function(sideOne, sideTwo, sideThree){
 
   var sides = [sideOne, sideTwo, sideThree]
-
   if(sideOne === '' || sideTwo === '' || sideThree === '') {
     alert("Please enter three side lengths");
+  } else if (isNaN(sides[0]) || isNaN(sides[1]) || isNaN(sides[2])) {
+    alert("all sides must be numerical");
   } else if (sides[0] >= (sides[1] + sides[2]) || sides[1] >= (sides[2] + sides[0]) || sides[2] >= (sides[0] + sides[1])) {
     alert("This is not a valid triangle");
   } else if (sides[0]===sides[1] && sides[1]===sides[2]) {
@@ -12,7 +13,8 @@ var triangle = function(sideOne, sideTwo, sideThree){
     return "isosceles";
   } else if (sides[0]!=sides[1] && sides[0]!=sides[2]) {
     return "scalene";
-  } else return sides; {;
+  } else {
+    return sides;
   }
 };
 
