@@ -1,10 +1,8 @@
-describe('isTriangle', function(){
-  it("determines if 3 sides create a valid triangle", function() {
-    expect(isTriangle(2, 2, 8000)).to.equal(false)
-  });
-});
-
 describe('triangleType', function(){
+  it("determines if 3 sides create a valid triangle", function() {
+    expect(triangleType(2, 2, 8000)).to.equal("These sides do not a triangle make.")
+  });
+
   it("determines if 3 sides make an equilateral triangle", function() {
     expect(triangleType(7,7,7)).to.equal("equilateral")
   });
