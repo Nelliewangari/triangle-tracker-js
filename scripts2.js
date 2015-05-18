@@ -1,6 +1,6 @@
-var triangle = function(sideOne, sideTwo, sideThree){
+var triangleType = function(sideOne, sideTwo, sideThree){
 
-  if (sideOne <= (sideTwo + sideThree) && sideTwo <= (sideThree + sideOne) && sideThree <= (sideOne + sideTwo)) {
+  if isTriangle?(sideOne, sideTwo, sideThree) {
     if (sideOne===sideTwo && sideTwo===sideThree) {
       return "equilateral";
     } else if (sideOne===sideTwo || sideOne===sideThree || sideThree===sideTwo) {
@@ -12,6 +12,10 @@ var triangle = function(sideOne, sideTwo, sideThree){
     return "These sides do not a triangle make.";
   }
 };
+
+var isTriangle? = function(sideOne, sideTwo, sideThree){
+  sideOne <= (sideTwo + sideThree) && sideTwo <= (sideThree + sideOne) && sideThree <= (sideOne + sideTwo)
+}
 
 
 $(document).ready(function() {
@@ -25,7 +29,7 @@ $(document).ready(function() {
     sideOne = parseInt($("input#sideOne").val(""));
     sideTwo = parseInt($("input#sideTwo").val(""));
     sideThree = parseInt($("input#sideThree").val(""));
-    
+
     $("#result").append(result);
     event.preventDefault();
   });
