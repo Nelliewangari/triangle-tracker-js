@@ -17,3 +17,13 @@ describe('triangleType', function(){
     expect(triangleType(2,3,4)).to.equal("scalene")
   });
 });
+
+describe('triangle', function(){
+  it("returns the triangle type for a valid triangle", function() {
+    expect(triangle(2,3,4)).to.equal("scalene")
+  });
+
+  it("sends invalid message for non-triangle entries", function() {
+    expect(triangle(2, 2, 8000)).to.equal("These sides do not a triangle make.")
+  });
+});
