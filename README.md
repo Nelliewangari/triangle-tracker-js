@@ -13,8 +13,8 @@ https://github.com/epicodus-lessons/triangle-tracker-js
 
 Contribute
 ---------
-Issue Tracking:  github.com/epicodus-lessons/triangle-tracker-js/issues <br>
-Source: github.com/epicodus-lessons/triangle-tracker-js
+**Issue Tracking**:  github.com/epicodus-lessons/triangle-tracker-js/issues <br>
+**Source**: github.com/epicodus-lessons/triangle-tracker-js
 
 Support
 -------
