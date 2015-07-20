@@ -1,8 +1,8 @@
 triangle-tracker-js
 =========
 
-Author: Kelly Becker
-Uses: Basic JavaScript, Mocha, Chai
+Author: Kelly Becker<br>
+Triangle Tracker takes the lengths of three sides and determines if they form a valid triangle.  If so, the tracker returns the name of the kind of triangle the sides make (equilateral, isosceles, scalene).
 
 Installation
 ------------
